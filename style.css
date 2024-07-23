@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --desaturatedDarkBlue: hsl(214, 17%, 51%);
+  --grayishBlue: hsl(212, 23%, 69%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+/* --------------- Mobile ----------------- */
+.container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  background-color: var(--lightGrayishBlue);
+}
+.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.625em;
+  width: 20.438em;
+  gap: 0.938em;
+  background-color: white;
+  box-shadow: 0px 4px 42.8px px rgba(0, 0, 0, 0.25);
+  clip-path: fill-box;
+}
+.img {
+  height: 12.5em;
+  width: 100%;
+  object-fit: cover;
+}
+.textBox{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.313em;
+  width: 16.313em;
+  gap: 0.813em;
+}
+.title {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: var(--veryDarkGrayishBlue);
+}
+.txt {
+  line-height: 150%;
+  font-size: 0.813em;
+  color: var(--desaturatedDarkBlue);
+}
+.profile {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 5.125em;
+  padding: 0 2.063em;
+  gap: 0.625em;
+}
+.imgProfile {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 2em;
+}
+.txtProfile {
+  width: 10.688em;
+}
+.nameProfile {
+  font-size: 0.813em;
+  color: var(--veryDarkGrayishBlue);
+}
+.dateProfile {
+  font-size: 0.813em;
+  color: var(--grayishBlue);
+}
+.btnShare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.875em;
+  height: 1.875em;
+  background-color: var(--lightGrayishBlue);
+  border-radius: 1em;
+  cursor: pointer;
+  border: 0;
+}
+.boxShare {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 20.438em;
+  height: 4em;
+  bottom: -13.5em;
+  background-color: var(--veryDarkGrayishBlue);
+  border-radius: 0em 0em 0.625em 0.625em;
+  gap: 1.188em;
+}
+.dark {
+  background-color: var(--desaturatedDarkBlue);
+}
+.txtShare {
+  font-size: 0.813em;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.37em;
+  color: var(--grayishBlue);
+}
+.btnRedes {
+  display: flex;
+  align-items: center;
+  gap: 1.063em;
+  width: 8.25em;
+}
+
+/* ------------------- Desktop --------------------- */
+
+@media (min-width: 48em) {
+  .card {
+    flex-direction: row;
+    width: 45.625em;
+  }
+  .img {
+    width: 17.813em;
+    height: 17.438em;
+    object-fit: cover;
+  }
+  .partTxt {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .textBox{
+    width: 23.125em;
+  }
+  .title {
+    font-size: 1.25em;
+  }
+  .profile {
+    justify-content: space-between;
+    padding-right: 3em;
+  }
+  .txtProfile {
+    margin-left: -4em;
+  }
+  .boxShare {
+    width: 15.5em;
+    height: 3.438em;
+    padding-left: 2em;
+    border-radius: 0.625em;
+    bottom: -1.5em;
+    left: 19.2em;
+
+  }
+  .dark {
+    display: none;
+  }
+
+}
+
+/* --------------- Parte Baja ------------------ */
+.attribution { 
+  position: absolute;
+  bottom: 1em;
+  font-size: 0.688em; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
